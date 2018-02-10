@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Profile User</string>
+    <string name="user_name_text_view">Lamine Taleb</string>
+    <string name="business_text_view">Photograph and web designer</string>
+    <string name="reviews_text_view">(220 Reviews)</string>
+    <string name="call_me_text_view">Call me</string>
+    <string name="chat_text_view">Chat</string>
+    <string name="review_text_view">Review</string>
+    <string name="about_me_text_view">About me</string>
+    <string name="description_text_view">My name is Taleb Lamine, i\'m a photographer and an amator web designer, i like taking portrait and go into nature and take stunning images.Photography is my passion .</string>
+    <string name="some_of_my_work_text_view">Some of my work</string>
+    <string name="information_text_view">Information</string>
+    <string name="business_name_text_view">Business name</string>
+    <string name="start_from_text_view">Start from</string>
+    <string name="starting_price_text_view">30 $</string>
+    <string name="address_text_view">Address</string>
+    <string name="user_address_text_view">Cheraga, Algiers, 1995 Street</string>
+    <string name="get_direction_text_view">Get Direction</string>
+    <string name="hours_of_operation_text_view">Hours of operation</string>
+    <string name="monday_wednesday_text_view">Monday - Wednesday</string>
+    <string name="monday_wednesday_hours">08:00 AM - 17:00 PM</string>
+    <string name="thursday_to_friday_text_view">Thursday to Friday</string>
+    <string name="thursday_friday_hours">10:00 AM - 15:00 PM</string>
+    <string name="saturday_to_sunday_text_view">Saturday to Sunday</string>
+    <string name="saturday_sunday_hours">12:00 AM - 00:00 AM</string>
+    <string name="contact_me_text_view">Contact me</string>
+    <string name="email_address_text_view">Email address</string>
+    <string name="user_email_adress">tarekprfs@gmail.com</string>
+    <string name="phone_number_text_view">Phone number</string>
+    <string name="user_phone_number">+213 541 99 19 24</string>
+    <string name="website_text_view">Website</string>
+    <string name="user_website_address">www.500px.com/lamineprfs</string>
+</resources>

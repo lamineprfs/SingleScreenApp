@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- User name style -->
+    <style name="user_name_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlack</item>
+        <item name="android:fontFamily">@font/gotham_medium</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/small_vertical_margin</item>
+    </style>
+
+    <!-- Head title style -->
+    <style name="titles_information_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlack</item>
+        <item name="android:fontFamily">@font/gotham_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- details and description style -->
+    <style name="details_description_style">
+        <item name="android:textColor">@color/lightBlack</item>
+        <item name="android:fontFamily">@font/gotham_semi_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

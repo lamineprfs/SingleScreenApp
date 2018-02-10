@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 0- Parent Relative Layout -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:scrollbars="none"
+    tools:context="com.nextgeneration.dz.profileuser.MainActivity">
+
+    <!-- 1- Parent Relative Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 2- Relative Layout for the cover and profile image -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 1- Cover ImageView -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cover_texture"
+                tools:ignore="ContentDescription" />
+
+            <!-- 2- Profile ImageView -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <!-- 3- User name TextView -->
+        <TextView
+            style="@style/user_name_style"
+            android:text="@string/user_name_text_view" />
+
+        <!-- 4- User profession or business-->
+        <TextView
+            style="@style/details_description_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/business_text_view"
+            android:textSize="20sp" />
+
+        <!-- 5- Horizontal Linear Layout for rating and reviews-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:gravity="center">
+
+            <!-- 1- Star View number 1-->
+            <View
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/rating_star" />
+
+            <!-- 2- Star View number 2-->
+            <View
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/rating_star" />
+
+            <!-- 3- Star View number 3-->
+            <View
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/rating_star" />
+
+            <!-- 4- Star View number 4-->
+            <View
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/rating_star" />
+
+            <!-- 5- Star View number 5-->
+            <View
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/rating_half_star" />
+
+            <!-- 6- Review Text view-->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_horizontal_margin"
+                android:layout_marginStart="@dimen/small_horizontal_margin"
+                android:text="@string/reviews_text_view" />
+
+        </LinearLayout>
+
+        <!-- 6- Horizontal Linear Layout for 3 icons with descriptions-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:gravity="center">
+
+            <!-- 1- Vertical Linear Layout for Call icon and text view-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1- Call icon view-->
+                <View
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:background="@drawable/ic_call_icon" />
+
+                <!-- 2- Call Text view-->
+                <TextView
+                    style="@style/details_description_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_vertical_margin"
+                    android:text="@string/call_me_text_view" />
+
+            </LinearLayout>
+
+            <!-- 2- Vertical Linear Layout for Chat icon and text view-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1- Chat icon view-->
+                <View
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:background="@drawable/ic_message_icon" />
+
+                <!-- 2- Chat Text view-->
+                <TextView
+                    style="@style/details_description_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_vertical_margin"
+                    android:text="@string/chat_text_view" />
+
+            </LinearLayout>
+
+            <!-- 3- Vertical Linear Layout for Review icon and text view-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1- Review icon view-->
+                <View
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:background="@drawable/ic_reviews_icon" />
+
+                <!-- 2- Review Text view-->
+                <TextView
+                    style="@style/details_description_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_vertical_margin"
+                    android:text="@string/review_text_view" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 7- Shadow -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/drop_shadow" />
+
+        <!-- 8- About me Text view -->
+        <TextView
+            style="@style/titles_information_style"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@string/about_me_text_view" />
+
+        <!-- 9- About me description Text view -->
+        <TextView
+            style="@style/details_description_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@string/description_text_view" />
+
+        <!-- 10- Line separator view -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:background="@color/line" />
+
+        <!-- 11- Horizontal Linear Layout for social media icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:orientation="horizontal"
+            tools:ignore="DisableBaselineAlignment">
+
+            <!-- 1- Linear Layout for facebook icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- 1- facebook image view -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_facebook"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <!-- 2- Linear Layout for instagram icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- 2- instagram image view -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_instagram"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <!-- 3- Linear Layout for flickr icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- 1- flickr image view -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flickr"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <!-- 4- Linear Layout for 500 px icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- 1- 500px image view -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_500px"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 12- Shadow -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/drop_shadow" />
+
+        <!-- 13- Some of my work Text view -->
+        <TextView
+            style="@style/titles_information_style"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@string/some_of_my_work_text_view" />
+
+        <!-- 14- Horizontal Scroll view for some images -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none">
+
+            <!-- 1- Horizontal Linear Layout for the images -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin">
+
+                <!-- 1- Algiers Mosque ImageView -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/algiers_mosque"
+                    tools:ignore="ContentDescription" />
+
+                <!-- 2- Staouali ImageView -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/staouali"
+                    tools:ignore="ContentDescription" />
+
+                <!-- 3- Girl ImageView -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hayek"
+                    tools:ignore="ContentDescription" />
+
+                <!-- 4- Algiers monument ImageView -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/makam_echahid"
+                    tools:ignore="ContentDescription" />
+
+                <!-- 5- Sahara ImageView -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sahara"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- 15- Shadow -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/drop_shadow" />
+
+        <!-- 16- Information text view -->
+        <TextView
+            style="@style/titles_information_style"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@string/information_text_view" />
+
+        <!-- 17- Line separator view -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_horizontal_margin"
+            android:background="@color/line" />
+
+        <!-- 18- Horizontal Linear Layout for the Business name details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- Business name text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/business_name_text_view"
+                android:textSize="14sp" />
+
+            <!-- 2- User business name text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/user_name_text_view" />
+
+        </LinearLayout>
+
+        <!-- 19- Horizontal Linear Layout for the Price details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- Price start from text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_from_text_view"
+                android:textSize="14sp" />
+
+            <!-- 2- starting price text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/starting_price_text_view" />
+
+        </LinearLayout>
+
+        <!-- 20- Horizontal Linear Layout for the Address details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- Address text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/address_text_view"
+                android:textSize="14sp" />
+
+            <!-- 2- Vertical Linear Layout for the Address details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 1- User address text view -->
+                <TextView
+                    style="@style/details_description_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_address_text_view" />
+
+                <!-- 2- Horizontal Linear layout for the Direction and location icon -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_vertical_margin"
+                    android:orientation="horizontal">
+
+                    <!-- 1- Get Direction text view -->
+                    <TextView
+                        style="@style/details_description_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="12sp"
+                        android:text="@string/get_direction_text_view" />
+
+                    <!-- 2- Arrow icon view -->
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/small_horizontal_margin"
+                        android:layout_marginStart="@dimen/small_horizontal_margin"
+                        android:background="@drawable/ic_arrow"/>
+
+                    <!-- 3- Relative Layout for the location icon -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/horizontal_margin"
+                        android:layout_marginEnd="@dimen/horizontal_margin">
+
+                        <!-- 1- Location icon view -->
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/small_horizontal_margin"
+                            android:layout_marginStart="@dimen/small_horizontal_margin"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/ic_location" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 21- Hours of operation text view -->
+        <TextView
+            style="@style/titles_information_style"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:text="@string/hours_of_operation_text_view"/>
+
+        <!-- 22- Line separator view -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_horizontal_margin"
+            android:background="@color/line" />
+
+        <!-- 23- Horizontal Linear Layout for operation hours(Monday to Wednesday) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginRight="@dimen/horizontal_margin">
+
+            <!-- 1- Circular dot  -->
+            <View
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/solid_circle"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- 2- Monday to Wednesday text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/monday_wednesday_text_view" />
+
+            <!-- 3- Hours text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/monday_wednesday_hours" />
+
+
+        </LinearLayout>
+
+        <!-- 24- Horizontal Linear Layout for operation hours(Thursday to Friday) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginRight="@dimen/horizontal_margin">
+
+            <!-- 1- Circular dot  -->
+            <View
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/solid_circle"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- 2- Thursday to Friday text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/thursday_to_friday_text_view" />
+
+            <!-- 3- Hours text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/thursday_friday_hours" />
+
+
+        </LinearLayout>
+
+        <!-- 25- Horizontal Linear Layout for operation hours(Saturday to Sunday) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginRight="@dimen/horizontal_margin">
+
+            <!-- 1- Circular dot  -->
+            <View
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/solid_circle"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- 2- Saturday to Sunday text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/saturday_to_sunday_text_view" />
+
+            <!-- 3- Hours text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/saturday_sunday_hours" />
+
+
+        </LinearLayout>
+
+        <!-- 26- Shadow -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:background="@drawable/drop_shadow" />
+
+        <!-- 27- Contact me text view -->
+        <TextView
+            style="@style/titles_information_style"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@string/contact_me_text_view"
+            tools:ignore="TooManyViews" />
+
+        <!-- 22- Line separator view -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_horizontal_margin"
+            android:background="@color/line" />
+
+        <!-- 23- Horizontal Linear Layout for the email address details text view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- Mail icon View -->
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                android:background="@drawable/ic_mail"
+                android:layout_marginEnd="@dimen/small_horizontal_margin" />
+
+            <!-- 2- Email address text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/email_address_text_view"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp" />
+
+            <!-- 3- User email address text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/user_email_adress" />
+
+        </LinearLayout>
+
+        <!-- 24- Horizontal Linear Layout for the Phone number details text view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- Phone icon View -->
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                android:background="@drawable/ic_phone"
+                android:layout_marginEnd="@dimen/small_horizontal_margin" />
+
+            <!-- 2- Phone number text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/phone_number_text_view"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp" />
+
+            <!-- 3- User phone number text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/user_phone_number" />
+
+        </LinearLayout>
+
+        <!-- 25- Horizontal Linear Layout for the website details text view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/small_vertical_margin">
+
+            <!-- 1- link icon View -->
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/small_horizontal_margin"
+                android:background="@drawable/ic_link"
+                android:layout_marginEnd="@dimen/small_horizontal_margin" />
+
+            <!-- 2- website text view -->
+            <TextView
+                style="@style/titles_information_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/website_text_view"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp" />
+
+            <!-- 3- User link website address text view -->
+            <TextView
+                style="@style/details_description_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/user_website_address" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
