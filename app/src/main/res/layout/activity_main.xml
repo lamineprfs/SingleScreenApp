@@ -303,17 +303,11 @@
             android:layout_marginTop="@dimen/small_vertical_margin"
             android:text="@string/some_of_my_work_text_view" />
 
-        <!-- 14- Horizontal Scroll view for some images -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:scrollbars="none">
-
             <!-- 1- Horizontal Linear Layout for the images -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/horizontal_margin">
 
                 <!-- 1- Algiers Mosque ImageView -->
@@ -356,19 +350,7 @@
                     android:src="@drawable/makam_echahid"
                     tools:ignore="ContentDescription" />
 
-                <!-- 5- Sahara ImageView -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sahara"
-                    tools:ignore="ContentDescription" />
-
             </LinearLayout>
-
-        </HorizontalScrollView>
 
         <!-- 15- Shadow -->
         <View
